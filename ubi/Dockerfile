@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/ubi8/ubi
 
 RUN set -eux; \
     dnf makecache; \
-    dnf install -yq java-11-openjdk.x86_64; \
+    dnf install -yq java-11-openjdk; \
     dnf install -yq git-lfs curl fontconfig; \
     dnf clean all; \
     rm -rf /var/cache/yum
