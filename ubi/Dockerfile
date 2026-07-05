@@ -3,8 +3,7 @@ FROM registry.access.redhat.com/ubi9/ubi
 
 RUN set -eux; \
     dnf makecache; \
-    dnf install -yq java-21-openjdk; \
-    dnf install -yq git-lfs curl fontconfig; \
+    dnf install -yq git git-lfs fontconfig java-21-openjdk; \
     dnf clean all; \
     rm -rf /var/cache/yum
 
