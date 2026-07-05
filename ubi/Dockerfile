@@ -31,7 +31,7 @@ RUN set -eux; \
 
 ENV LANG C.UTF-8
 
-ENV JAVA_HOME=/usr/lib/jvm/jre-11-openjdk
+ENV JAVA_HOME=/usr/lib/jvm/jre-openjdk
 ENV PATH "${JAVA_HOME}/bin:${PATH}"
 
 USER ${user}
