@@ -1,14 +1,14 @@
 # syntax = docker/dockerfile:1.2
-FROM registry.access.redhat.com/ubi8/ubi
+FROM registry.access.redhat.com/ubi9/ubi
 
 RUN set -eux; \
     dnf makecache; \
-    dnf install -yq java-11-openjdk; \
+    dnf install -yq java-21-openjdk; \
     dnf install -yq git-lfs curl fontconfig; \
     dnf clean all; \
     rm -rf /var/cache/yum
 
-ARG VERSION=4.11.2
+ARG VERSION=unset
 ARG user=jenkins
 ARG group=jenkins
 ARG uid=1000
